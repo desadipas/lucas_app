@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.tibox.lucas.activity.ActivityCambioContrasenia">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/lyTooalbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?colorPrimary"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:titleTextAppearance="@style/AppTheme.Toolbar.Title"
+                app:subtitleTextAppearance="@style/AppTheme.Toolbar.SubTitle"
+                />
+        </LinearLayout>
+
+        <ScrollView
+            android:paddingTop="5dp"
+            android:id="@+id/scrollViewUbicame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+
+            <android.support.v7.widget.CardView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/card_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:layout_margin="10dp"
+                android:foreground="?android:attr/selectableItemBackground"
+                card_view:cardCornerRadius="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:text="Cambio de contraseña"
+                        style="@style/style_textview_title"/>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_password_actual"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textAlignment="viewStart"
+                        android:layout_marginTop="16dp"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/MyErrorText"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <com.maksim88.passwordedittext.PasswordEditText
+                            android:id="@+id/et_contrasenia_actual"
+                            style="@style/style_edittext_inicio"
+                            android:gravity="start"
+                            android:hint="Contraseña actual"
+                            android:inputType="textPassword"
+                            android:textAlignment="viewStart"
+                            app:pet_disableIconAlpha="true"
+                            android:textSize="@dimen/edittext_text_size"
+                            />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_password_nueva"
+                        android:layout_width="match_parent"
+                        android:gravity="start"
+                        android:textAlignment="viewStart"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/MyHintText"
+                        app:errorTextAppearance="@style/MyErrorText"
+                        app:errorEnabled="true">
+
+                        <com.maksim88.passwordedittext.PasswordEditText
+                            android:id="@+id/et_contrasenia_nueva"
+                            style="@style/style_edittext_inicio"
+                            android:gravity="start"
+                            android:hint="Nueva contraseña"
+                            android:inputType="textPassword"
+                            android:textAlignment="viewStart"
+                            app:pet_disableIconAlpha="true"
+                            android:textSize="@dimen/edittext_text_size"/>
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_password_repetir"
+                        android:layout_width="match_parent"
+                        android:gravity="start"
+                        android:textAlignment="viewStart"
+                        android:layout_height="wrap_content"
+                        app:hintTextAppearance="@style/MyHintText"
+                        app:errorTextAppearance="@style/MyErrorText"
+                        app:errorEnabled="true">
+
+                        <com.maksim88.passwordedittext.PasswordEditText
+                            android:id="@+id/et_contrasenia_nueva_rep"
+                            style="@style/style_edittext_inicio"
+                            android:gravity="start"
+                            android:hint="Repetir nueva contraseña"
+                            android:inputType="textPassword"
+                            android:textAlignment="viewStart"
+                            app:pet_disableIconAlpha="true"
+                            android:textSize="@dimen/edittext_text_size"/>
+                    </android.support.design.widget.TextInputLayout>
+
+
+
+                    <LinearLayout
+                        android:paddingTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Contraseña actual: "
+                            style="@style/style_textview_inicio"/>
+
+                        <EditText
+                            android:id="@+id/et_contrasenia_actuall"
+                            style="@style/style_edittext_inicio"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:inputType="textPassword"
+                            android:maxLength="50" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="Nueva contraseña: "
+                            style="@style/style_textview_inicio" />
+
+                        <EditText
+                            android:id="@+id/et_contrasenia_nuevaa"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLength="50"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Repetir nueva contraseña: "
+                            style="@style/style_textview_inicio" />
+
+                        <EditText
+                            android:id="@+id/et_contrasenia_nueva_reps"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPassword"
+                            android:maxLength="50"/>
+
+                    </LinearLayout>
+
+                    <!-- Codigo verificador movil -->
+                    <LinearLayout
+                        android:id="@+id/ly_codigo_verificador_numero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:visibility="visible">
+
+                        <Button
+                            android:id="@+id/btnSolicitarCodigo"
+                            style="@style/style_button_inicio"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/ps_button_soylucas_amarillo"
+                            android:text="solicitar pin"
+                            android:textColor="@color/White" />
+
+                        <TextView
+                            android:paddingTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/Black"
+                            android:textSize="@dimen/textview_text_size"
+                            android:text="Ingresa tu PIN de seguridad"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingTop="15dp">
+
+                            <EditText
+                                android:id="@+id/etPINVerificacion"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textStyle="bold"
+                                android:longClickable="true"
+                                android:gravity="center"
+                                android:hint="----"
+                                android:textSize="25dp"
+                                android:digits="0123456789"
+                                android:maxLength="4"/>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <!-- -->
+
+                    <LinearLayout
+                        android:paddingTop="30dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/btn_cancelar"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_weight="1"
+                            android:background="@drawable/ps_button_soylucas_blanco"
+                            android:text="Volver a la bandeja"
+                            android:textColor="@color/soylucasfondo"
+                            style="@style/style_button_inicio"/>
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:paddingTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_gravity="center">
+
+                        <Button
+                            android:id="@+id/btn_cambiar"
+                            style="@style/style_button_inicio"
+                            android:layout_gravity="center"
+                            android:background="@drawable/ps_button_soylucas_amarillo"
+                            android:drawableRight="@drawable/ic_continuar_forward_24px"
+                            android:text="cambiar contraseña"
+                            android:textColor="@color/White" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="30dp"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

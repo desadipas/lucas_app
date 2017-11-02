@@ -1,0 +1,220 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/select_listview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black85Opacity"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Fecha: " />
+            <TextView
+                android:id="@+id/tv_fecha"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/soylucasfondo"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black85Opacity"
+                android:textSize="14dp"
+                android:text="Operación: "
+                android:gravity="left"
+                android:id="@+id/textView" />
+
+            <TextView
+                android:id="@+id/tv_operacion"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:textStyle="bold"
+                android:textColor="@color/soylucasfondo"
+                android:textSize="12dp"
+                android:gravity="center"
+                android:paddingTop="5dp"
+                android:text="27/07/2017"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black85Opacity"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Capital: " />
+
+            <TextView
+                android:id="@+id/tv_capital"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/soylucasfondo"
+                android:textSize="12dp"
+                android:paddingTop="5dp"
+                android:text="939.00" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black85Opacity"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Interes: " />
+
+            <TextView
+                android:id="@+id/tv_interes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/soylucasfondo"
+                android:textSize="12dp"
+                android:paddingTop="5dp"
+                android:text="939.00" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black85Opacity"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Gasto: " />
+
+            <TextView
+                android:id="@+id/tv_gasto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/soylucasfondo"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="SOLES" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black85Opacity"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Monto total: " />
+            <TextView
+                android:id="@+id/tv_monto_total"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/soylucasfondo"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="EN PROCESO" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black85Opacity"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Nuevo saldo: " />
+
+            <TextView
+                android:id="@+id/tv_nuevo_saldo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="Pendiente"
+                android:textColor="@color/soylucasfondo"
+                android:textSize="12dp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

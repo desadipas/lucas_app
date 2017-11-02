@@ -1,0 +1,1193 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_persona"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.tibox.lucas.activity.ActivityPersona"
+    android:background="@color/soylucasamarillo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:id="@+id/lyTooalbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="true"
+            android:paddingBottom="20dp"
+            android:orientation="vertical">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="?colorPrimary"
+                app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                app:titleTextAppearance="@style/AppTheme.Toolbar.Title"
+                app:subtitleTextAppearance="@style/AppTheme.Toolbar.SubTitle"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyDatosVerificacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Datos Personales"
+                android:textColor="@color/Black"
+                android:textStyle="italic|bold"
+                android:textSize="30dp"
+                android:gravity="center" />
+
+        </LinearLayout>
+
+        <ScrollView
+            android:paddingTop="5dp"
+            android:id="@+id/scrollViewUbicame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="3dp"
+                android:id="@+id/lyPersona"
+                >
+
+                <LinearLayout
+                    android:id="@+id/lyDocumento"
+                    android:paddingTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/documento"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etDocumento"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:longClickable="true"
+                        android:maxLength="8"/>
+
+                    <Button
+                        android:id="@+id/btnBuscarCliente"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="40dp"
+                        android:drawableRight="@android:drawable/ic_menu_search"
+                        android:text="Buscar"
+                        android:paddingLeft="20dp"
+                        android:background="@color/Indigo"
+                        android:textColor="@color/White"
+                        android:visibility="gone"/>
+
+                    <Button
+                        android:id="@+id/btnpruebas"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="40dp"
+                        android:text="GPS"
+                        android:paddingLeft="20dp"
+                        android:background="@color/Indigo"
+                        android:visibility="gone"
+                        android:textColor="@color/White"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lyCodigoVerificador"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="@string/codigoverificador"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etCodigoVerificador"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:longClickable="true"
+                        android:gravity="center"
+                        android:text="0"
+                        android:maxLength="1"/>
+
+                    <Button
+                        android:id="@+id/btnCodigoVerificador"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:text=".?"
+                        android:background="@drawable/ps_button_digg"
+                        android:gravity="center"
+                        android:textColor="@color/Blue"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nombres"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etNombres"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="40"/>
+                </LinearLayout>
+
+                <LinearLayout
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/primerapellido"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etPrimerApellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="20"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/segundoapellido"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etSegundoApellido"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="20"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/celular"
+                            android:textColor="@color/Black"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="  ( Necesario para envio SMS )"
+                            android:textColor="@color/Red"
+                            android:textStyle="bold"/>
+
+                    </LinearLayout>
+
+
+                   <EditText
+                       android:id="@+id/etCelularT"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content"
+                       android:inputType="number"
+                       android:maxLength="9"
+                       />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/correo"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etCorreo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ly_confirmar_correo"
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/confirmarcorreo"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etCorreoConfirmar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textEmailAddress"
+                        android:maxLength="50"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sexo"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:spinnerMode="dropdown"
+                        android:id="@+id/spSexo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/telfonofijo"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etTelefonofijo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="9"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fechnacimiento"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etFechaNac"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        android:enabled="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/Black"
+                        />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_my_calendar"
+                        android:background="@drawable/ps_button_lenddo"
+                        android:id="@+id/ibtnFechaNac" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cargopublico"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spCargoPublico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/estadocivil"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spEstadoCivil"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- Conyuge -->
+                <LinearLayout
+                    android:id="@+id/lyConyuge"
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Dni Conyuge:"
+                            android:textColor="@color/Black"
+                            android:textStyle="bold"/>
+                        <EditText
+                            android:id="@+id/etDocumentoConyuge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:longClickable="true"
+                            android:maxLength="8"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Nombres Conyuge:"
+                            android:textColor="@color/Black"
+                            android:textStyle="bold"/>
+                        <EditText
+                            android:id="@+id/etNombresConyuge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:maxLength="40"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:paddingTop="3dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Apellidos Conyuge: "
+                            android:textColor="@color/Black"
+                            android:textStyle="bold"/>
+
+                        <EditText
+                            android:id="@+id/etApellidosConyuge"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="text"
+                            android:maxLength="20"/>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <!-- -->
+
+                <!-- Direccion del titular -->
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/Indigo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Dirección"
+                    android:textColor="@color/Indigo"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/departamento"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spDepartamento"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/provincia"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spProvincia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/distrito"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spDistrito"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipodireccion"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spDireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="3dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/NrooMZ"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spMz"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="2" />
+
+                    <EditText
+                        android:id="@+id/etMz"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:inputType="text"
+                        android:maxLength="5" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/DptooLt"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:id="@+id/spLt"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/etLt"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="8"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/direccion"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etDireccion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:maxLength="40"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tiporesidencia"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spResidencia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <!-- -->
+
+
+                <!-- lugardeempleo -->
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/Indigo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/datosdeempleo"
+                    android:textColor="@color/Indigo"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/actividadeco"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spActEconomica"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/situacionlaboral"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spSitLaboral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/profesion"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spProfesion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipoempleo"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spEmpleo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ruc"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etRuc"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="11"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/centrolaboral"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etCentroLaboral"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:maxLength="40"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fechainglaboral"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etFechaIngLaboral"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        android:enabled="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/Black"
+                        />
+
+                    <ImageButton
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:src="@android:drawable/ic_menu_my_calendar"
+                        android:background="@drawable/ps_button_lenddo"
+                        android:id="@+id/ibtnFechaLaboral" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/telefonoempleo"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <EditText
+                        android:id="@+id/etTelefonoEmpleo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:maxLength="9"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ingdeclarado"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etIngresoDeclarado"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10"/>
+                </LinearLayout>
+
+                <!-- Direccion de empleo -->
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/Indigo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/direccionempleo"
+                    android:textColor="@color/Indigo"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/departamento"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold" />
+
+                    <Spinner
+                        android:id="@+id/spDepartamentoEmpleo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/provincia"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spProvinciaEmpleo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/distrito"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spDistritoEmpleo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipodireccion"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <Spinner
+                        android:id="@+id/spDireccionEmpleo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/NrooMZ"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:id="@+id/spMzEmpleo"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/etMzEmpleo"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="5"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="@string/DptooLt"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+
+                    <Spinner
+                        android:id="@+id/spLtEmpleo"
+                        android:layout_gravity="center"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"/>
+
+                    <EditText
+                        android:id="@+id/etLtEmpleo"
+                        android:layout_width="0dp"
+                        android:layout_weight="2"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:maxLength="8"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/direccionempleo"
+                        android:textColor="@color/Black"
+                        android:textStyle="bold"/>
+                    <EditText
+                        android:id="@+id/etDireccionEmpleo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:maxLength="40"/>
+                </LinearLayout>
+
+                <LinearLayout
+                android:paddingTop="3dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <CheckBox
+                            android:id="@+id/cbxAutorizoDatos"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_gravity="center"
+                            android:text="Autorizo a Edpyme Inversiones La Cruz a utilizar mis datos personales para los fines mencionados." />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:textColor="@color/White"
+                                android:layout_gravity="center"/>
+
+                            <TextView
+                                android:id="@+id/tvLinkTerminos"
+                                android:layout_height="wrap_content"
+                                android:layout_width="0dp"
+                                android:layout_weight="2"
+                                android:textColor="@color/Blue"
+                                android:gravity="right"
+                                android:textColorLink="@color/Red"
+                                android:text="Ver Términos y Condiciones (*)"/>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="7dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cbxAutorizoEnvio"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:text="Autorizo a Edpyme inversiones la Cruz a enviarme información sobre campañas vigentes de sus productos ofertados."/>
+
+                </LinearLayout>
+
+                <!-- Codigo verificador movil -->
+                <LinearLayout
+                    android:id="@+id/lyCodigoVerificadorNumero"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="15dp"
+                    android:visibility="gone">
+
+                    <Button
+                        android:id="@+id/btnSolicitarCodigo"
+                        android:layout_width="300dp"
+                        android:layout_height="50dp"
+                        android:textSize="17dp"
+                        android:padding="10dp"
+                        android:background="@drawable/ps_button_pdf"
+                        android:textColor="@color/White"
+                        android:textStyle="italic|bold"
+                        android:text="Solicitar código"
+                        />
+
+                    <TextView
+                        android:paddingTop="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textColor="@color/Black"
+                        android:textSize="15dp"
+                        android:text="Ingresa tu PIN de seguridad"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="15dp">
+
+                        <EditText
+                            android:id="@+id/etPINVerificacion"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:textStyle="bold"
+                            android:longClickable="true"
+                            android:gravity="center"
+                            android:textSize="25dp"
+                            android:maxLength="4"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!-- -->
+
+                <LinearLayout
+                    android:paddingTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btn_continuar"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:textSize="17dp"
+                        android:layout_gravity="center_horizontal"
+                        android:textColor="@color/White"
+                        android:background="@drawable/ps_button_lenddo"
+                        android:textStyle="italic|bold"
+                        android:text="Continuar" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="60dp"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabGrabarPersona"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        app:fab_colorNormal="@color/Blue"
+        android:visibility="gone"
+        android:src="@mipmap/ic_add_white_18dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,221 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@drawable/select_listview">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1.4"
+            android:padding="5dp"
+            android:visibility="gone"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Black"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Cliente" />
+
+            <TextView
+                android:id="@+id/tvCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textColor="@color/Blue"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="SILVA ESTRADA, NAPOLEON" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Fecha Reg." />
+            <TextView
+                android:id="@+id/tvFechaReg"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/Blue"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="2017-03-18 01:32:35.000" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black"
+                android:textSize="14dp"
+                android:text="Producto"
+                android:gravity="left"
+                android:id="@+id/textView" />
+
+            <TextView
+                android:id="@+id/tvProducto"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/Blue"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="PRENDATODO EN CUOTAS" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Préstamo" />
+
+            <TextView
+                android:id="@+id/tvPrestamo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/Blue"
+                android:textSize="12dp"
+                android:paddingTop="5dp"
+                android:text="939.00" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Proceso" />
+
+            <TextView
+                android:id="@+id/tvProceso"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/Blue"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="ESTADO DE CUENTA" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp"
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Moneda" />
+
+            <TextView
+                android:id="@+id/tvMoneda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/Blue"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="SOLES" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="1dp">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/Black"
+                android:textSize="14dp"
+                android:gravity="left"
+                android:text="Estado" />
+            <TextView
+                android:id="@+id/tvEstado"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textStyle="bold"
+                android:textColor="@color/Blue"
+                android:textSize="12dp"
+                android:gravity="left"
+                android:paddingTop="5dp"
+                android:text="EN PROCESO" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPrimary2">#424242</color>
+    <color name="colorPrimaryDark2">#212121</color>
+    <color name="colorAccent2">#3F51B5</color>
+
+    <color name="Red">#F44336</color>
+    <color name="Pink">#E91E63</color>
+    <color name="Purple">#9C27B0</color>
+    <color name="DeepPurple">#673AB7</color>
+    <color name="Indigo">#3F51B5</color>
+    <color name="Blue">#2196F3</color>
+    <color name="LightBlue">#03A9F4</color>
+    <color name="Cyan">#00BCD4</color>
+    <color name="Teal">#009688</color>
+    <color name="Green">#4CAF50</color>
+    <color name="LightGreen">#8BC34A</color>
+    <color name="Lime">#CDDC39</color>
+    <color name="Yellow">#FFEB3B</color>
+    <color name="Amber">#FFC107</color>
+    <color name="Orange">#FF9800</color>
+    <color name="DeepOrange">#FF5722</color>
+    <color name="Brown">#795548</color>
+    <color name="Grey">#9E9E9E</color>
+    <color name="BlueGrey">#607D8B</color>
+    <color name="Black">#000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="holo_red_light">#ffff4444</color>
+
+    <color name="Blue100">#BBDEFB</color>
+    <color name="Blue700">#1976D2</color>
+    <color name="Blue900">#0D47A1</color>
+    <color name="Indigo700">#303F9F</color>
+    <color name="Grey600">#757575</color>
+    <color name="Grey900">#212121</color>
+    <color name="xgris50">#FAFAFA</color>
+    <color name="gris100">#F5F5F5</color>
+    <color name="gris200">#EEEEEE</color>
+    <color name="gris300">#E0E0E0</color>
+    <color name="gris400">#BDBDBD</color>
+    <color name="gris500">#9E9E9E</color>
+    <color name="gris600">#757575</color>
+    <color name="gris700">#616161</color>
+    <color name="gris800">#424242</color>
+    <color name="gris900">#212121</color>
+    <color name="lverde300">#AED581</color>
+    <color name="lverde400">#9CCC65</color>
+    <color name="lverde500">#8BC34A</color>
+    <color name="lverde600">#43A047</color>
+    <color name="lverde700">#388E3C</color>
+
+    <color name="soylucasfondo">#EB2037</color>
+    <color name="soylucasamarillo">#FEC007</color>
+    <color name="soylucasamarillo_dos">#FE9F00</color>
+    <color name="soylucasverde">#28CBA9</color>
+    <color name="soylucasverde_dos">#1E987F</color>
+    <color name="soylucasrojo_dos">#C9182C</color>
+
+    <color name="soylucasverdebutton">#45B6AF</color>
+    <color name="soylucasverdebuttonborder">#3ea49d</color>
+
+    <color name="Black55Opacity">#8C000000</color>
+    <color name="Black85Opacity">#D9000000</color>
+    <color name="soylucasamarillo_doso85Opacity">#D9FE9F00</color>
+    <color name="soylucasamarillo_doso55Opacity">#8CFE9F00</color>
+    <color name="soylucasverde_dos85Opacity">#D91E987F</color>
+    <color name="soylucasamarillo_dos10Opacity">#1AFE9F00</color>
+    <color name="soylucasverde_dos10Opacity">#1A1E987F</color>
+    <color name="Black40Opacity">#66000000</color>
+    <color name="soylucasverde85Opacity">#D928CBA9</color>
+    <color name="White25Opacity">#40FFFFFF</color>
+    <color name="soylucasfondo80Opacity">#CCEB2037</color>
+    <color name="White85Opacity">#D9FFFFFF</color>
+
+</resources>

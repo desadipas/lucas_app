@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "156443076371",
+    "firebase_url": "https://lucasapp-4d83a.firebaseio.com",
+    "project_id": "lucasapp-4d83a",
+    "storage_bucket": "lucasapp-4d83a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:156443076371:android:0bbc02b2407cbbb9",
+        "android_client_info": {
+          "package_name": "com.tibox.lucas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "156443076371-06rk2dbd624nb2tc19ch0dvbn0tdegmr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA80qgTB4TS6Qh5aPy4Nw5XabAjGyAuqww"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

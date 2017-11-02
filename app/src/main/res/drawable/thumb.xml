@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval" >
+
+    <gradient
+        android:angle="270"
+        android:endColor="@color/soylucasamarillo"
+        android:startColor="@color/soylucasamarillo" />
+
+    <size
+        android:height="@dimen/thumb_height_size"
+        android:width="@dimen/thumb_width_size" />
+
+</shape>

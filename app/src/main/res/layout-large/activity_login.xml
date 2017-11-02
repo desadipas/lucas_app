@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.tibox.lucas.activity.ActivityLogin"
+    android:background="@drawable/fondo_sesion">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        android:paddingBottom="64dp"
+        android:paddingLeft="32dp"
+        android:paddingRight="32dp"
+        android:paddingTop="64dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            android:paddingLeft="@dimen/activity_vertical_margin"
+            android:paddingRight="@dimen/activity_vertical_margin"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/logo_sesion" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:orientation="vertical"
+                android:paddingBottom="25dp">
+
+                <TextView
+                    android:id="@+id/tvTituloFb"
+                    style="@style/style_textview_title"
+                    android:text="Iniciar sesión"
+                    android:textColor="@color/Black" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etUser_"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Correo electrónico"
+                android:inputType="textEmailAddress"
+                android:paddingLeft="10dp"
+                android:textColor="@color/Black"
+                android:textSize="14dp"
+                android:textStyle="normal"
+                android:visibility="gone" />
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                app:errorTextAppearance="@style/MyErrorText"
+                app:hintTextAppearance="@style/MyHintText"
+                tools:errorEnabled="true">
+
+                <EditText
+                    android:id="@+id/etUser"
+                    style="@style/style_edittext_inicio"
+                    android:gravity="start"
+                    android:hint="Correo electrónico"
+                    android:inputType="textEmailAddress"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/edittext_text_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                app:errorEnabled="true"
+                app:errorTextAppearance="@style/MyErrorText"
+                app:hintTextAppearance="@style/MyHintText">
+
+                <com.maksim88.passwordedittext.PasswordEditText
+                    android:id="@+id/etPassword"
+                    style="@style/style_edittext_inicio"
+                    android:gravity="start"
+                    android:hint="Password"
+                    android:inputType="textPassword"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/edittext_text_size"
+                    app:pet_disableIconAlpha="true" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/White"
+                android:orientation="vertical"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/etPassword_"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="@string/Login_password"
+                    android:inputType="textPassword"
+                    android:paddingLeft="10dp"
+                    android:textColor="@color/Black"
+                    android:textSize="14dp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <Switch
+                android:id="@+id/swShowPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/etPassword"
+                android:layout_below="@+id/etPassword"
+                android:layout_gravity="right"
+                android:text="MOSTRAR "
+                android:textColor="@color/soylucasverde"
+                android:textStyle="bold"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnAcceder"
+                style="@style/style_button_inicio"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/ps_button_soylucas_rojo"
+                android:text="Iniciar Sesion"
+                android:textColor="@color/White" />
+
+            <TextView
+                android:id="@+id/tvRecuperarContraseña"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="¿OLVIDASTE LA CONTRASEÑA?"
+                android:textSize="@dimen/label_text_size"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnRegistro"
+                style="@style/style_button_inicio"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/ps_button_soylucas_blanco"
+                android:text="Crear cuenta"
+                android:textColor="@color/soylucasfondo" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:titleTextAppearance="@style/AppTheme.Toolbar.Title"
+            app:subtitleTextAppearance="@style/AppTheme.Toolbar.SubTitle"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,440 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_registro_garantias"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.tibox.lucas.activity.ActivityRegistroGarantias">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <ScrollView
+            android:paddingTop="5dp"
+            android:id="@+id/scrollViewGarantia"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="3dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Familia"
+                    android:textSize="10dp"
+                    android:textColor="@color/Black" />
+
+                <Spinner
+                    android:id="@+id/spFamilia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Artículo"
+                    android:textSize="10dp"
+                    android:textColor="@color/Black" />
+
+                <Spinner
+                    android:id="@+id/spArticulo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Marca"
+                    android:textSize="10dp"
+                    android:textColor="@color/Black"
+                    android:id="@+id/textView3" />
+
+                <Spinner
+                    android:id="@+id/spMarca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Línea"
+                    android:textSize="10dp"
+                    android:textColor="@color/Black" />
+
+                <Spinner
+                    android:id="@+id/spLinea"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Modelo"
+                    android:textSize="10dp"
+                    android:textColor="@color/Black" />
+
+                <Spinner
+                    android:id="@+id/spModelo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </Spinner>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/valortasacion"
+                            android:textSize="12dp"
+                            android:textColor="@color/Black"
+                            />
+                        <EditText
+                            android:id="@+id/etValorTasadoPorcentaje"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:text="S/. 123123"
+                            android:gravity="left"
+                            android:enabled="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/Black"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/vtasacion"
+                            android:textSize="12dp"
+                            android:textColor="@color/Black"/>
+
+                        <EditText
+                            android:id="@+id/etValorTasado"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:text="S/. 00.00"
+                            android:gravity="left"
+                            android:enabled="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/Black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/prestamomaximo"
+                            android:textSize="12dp"
+                            android:textColor="@color/Black"/>
+                        <EditText
+                            android:id="@+id/etPrestamoMaximo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:text="S/. 00.00"
+                            android:gravity="left"
+                            android:enabled="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/Black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/descripcion"
+                        android:textSize="12dp"
+                        android:textColor="@color/Black"/>
+                    <EditText
+                        android:id="@+id/etDescripcion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textMultiLine"
+                        android:maxLength="40"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:paddingTop="3dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prestamogarantia"
+                        android:textSize="12dp"
+                        android:textColor="@color/Black"/>
+                    <EditText
+                        android:id="@+id/etPrestamo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLength="10"
+                        android:inputType="numberDecimal"/>
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:id="@+id/lyFotosGarantia"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center"
+                    android:padding="10dp"
+                    android:visibility="gone">
+
+                    <GridView
+                        android:id="@+id/gvImagesArticulo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:numColumns="auto_fit"
+                        android:columnWidth="80dp"
+                        android:horizontalSpacing="0dp"
+                        android:gravity="center"
+                        android:stretchMode="columnWidth"
+                        android:drawSelectorOnTop="false"
+                        android:isScrollContainer="false">
+                    </GridView>
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:paddingTop="15dp">
+
+                    <Button
+                        android:id="@+id/btnAgregarLista"
+                        android:layout_width="140dp"
+                        android:layout_height="35dp"
+                        android:background="@color/Indigo"
+                        android:textColor="@color/White"
+                        android:drawableLeft="@android:drawable/ic_input_add"
+                        android:textSize="10dp"
+                        android:text="Agregar a la Lista" />
+
+                </LinearLayout>
+
+                <ListView
+                        android:id="@+id/lvArtIngresados"
+                        android:paddingTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:divider="@color/Black"
+                        android:dividerHeight="2dp"
+                        android:background="@android:color/transparent"
+                        android:cacheColorHint="@android:color/transparent"
+                        android:visibility="gone"/>
+
+                <LinearLayout
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/prestamomaximo"
+                            android:textSize="12dp"
+                            android:textColor="@color/Black"
+                            />
+
+                        <EditText
+                            android:id="@+id/etPrestamoMaximoSolicitud"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:text="S/. 123123"
+                            android:gravity="left"
+                            android:enabled="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/Black"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/items"
+                            android:textSize="12dp"
+                            android:textColor="@color/Black"/>
+
+                        <EditText
+                            android:id="@+id/etItems"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="number"
+                            android:text="0"
+                            android:gravity="left"
+                            android:enabled="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/Black"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/totalprestamo"
+                            android:textSize="12dp"
+                            android:textColor="@color/Black"/>
+                        <EditText
+                            android:id="@+id/etTotalPrestamo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:text="S/. 0.00"
+                            android:gravity="left"
+                            android:enabled="false"
+                            android:textStyle="bold"
+                            android:textColor="@color/Black"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/prestamominimo"
+                        android:textSize="12dp"
+                        android:textColor="@color/Black"
+                        />
+
+                    <EditText
+                        android:id="@+id/etPrestamoMinimoSolicitud"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:text="S/. 123123"
+                        android:gravity="left"
+                        android:enabled="false"
+                        android:textStyle="bold"
+                        android:textColor="@color/Black"
+                        />
+                </LinearLayout>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="70dp"
+                        />
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabGrabarGarantias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        tools:fab_colorNormal="@color/Indigo"
+        android:src="@mipmap/ic_add_white_18dp"
+        />
+
+    <com.getbase.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabFotoGarantias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="13dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentLeft="true"
+        tools:fab_colorNormal="@color/Indigo"
+        android:src="@android:drawable/ic_menu_camera"
+        />
+
+
+</RelativeLayout>

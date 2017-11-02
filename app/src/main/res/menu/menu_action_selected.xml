@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_editar"
+        android:title="Editar">
+    </item>
+    <item
+        android:id="@+id/item_eliminar"
+        android:title="Eliminar">
+    </item>
+    <item
+        android:id="@+id/item_detalle"
+        android:title="Detalle">
+    </item>
+    <item
+        android:id="@+id/item_continuar"
+        android:title="Continuar">
+    </item>
+    <item
+    android:id="@+id/item_anular"
+    android:title="Anular">
+    </item>
+    <item
+        android:id="@+id/item_cancelar"
+        android:title="Cancelar">
+    </item>
+
+</menu>

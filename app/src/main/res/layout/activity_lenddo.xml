@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    tools:context="com.tibox.lucas.lenddo.LenddoActivity">
+
+    <LinearLayout
+        android:id="@+id/lyTooalbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="?colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:titleTextAppearance="@style/AppTheme.Toolbar.Title"
+            app:subtitleTextAppearance="@style/AppTheme.Toolbar.SubTitle"
+            />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.CardView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:clickable="true"
+            android:layout_margin="10dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            card_view:cardCornerRadius="2dp">
+
+            <LinearLayout
+                android:id="@+id/formContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="100dp"
+                        android:layout_height="60dp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/holo_red_light"
+                        android:src="@drawable/logo_lucas" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Revise los detalles de su solicitud de préstamo y, a continuación, conecte su cuenta de Facebook haciendo clic en el botón de abajo."
+                    android:textSize="@dimen/labels_text_size"
+                    android:textColor="@color/Black"
+                    />
+
+
+                <LinearLayout style="@style/fieldContainer">
+
+                    <TextView
+                        style="@style/formLabel"
+                        android:text="Apellidos"
+                        android:textSize="@dimen/textview_text_size"
+                        android:textColor="@color/Black85Opacity"/>
+
+                    <TextView
+                        android:id="@+id/tv_apellidos"
+                        style="@style/formLabel"
+                        android:maxLines="1"
+                        android:text="DIPAS"
+                        android:textColor="@color/soylucasfondo"
+                        android:textSize="@dimen/textview_text_size"
+                        />
+                </LinearLayout>
+
+                <LinearLayout style="@style/fieldContainer">
+
+                    <TextView
+                        style="@style/formLabel"
+                        android:text="Nombres"
+                        android:textColor="@color/Black85Opacity"
+                        android:textSize="@dimen/textview_text_size" />
+
+                    <TextView
+                        android:id="@+id/tv_nombres"
+                        style="@style/formLabel"
+                        android:maxLines="1"
+                        android:text="DIPAS"
+                        android:textColor="@color/soylucasfondo"
+                        android:textSize="@dimen/textview_text_size" />
+                </LinearLayout>
+
+                <LinearLayout style="@style/fieldContainer">
+
+                    <TextView
+                        style="@style/formLabel"
+                        android:text="Numero Movil"
+                        android:textSize="@dimen/textview_text_size"
+                        android:textColor="@color/Black85Opacity"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            style="@style/formLabel"
+                            android:layout_weight="0"
+                            android:text="+51"
+                            android:textSize="@dimen/textview_text_size"
+                            android:textColor="@color/Black55Opacity"/>
+
+                        <TextView
+                            style="@style/formLabel"
+                            android:layout_weight="0"
+                            android:maxLines="1"
+                            android:textSize="@dimen/textview_text_size"
+                            android:text=" " />
+
+                        <TextView
+                            android:id="@+id/tv_numero_movil"
+                            style="@style/formLabel"
+                            android:layout_weight="1"
+                            android:maxLines="1"
+                            android:textSize="@dimen/textview_text_size"
+                            android:text="99123033"
+                            android:textColor="@color/soylucasfondo"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    style="@style/fieldContainer"
+                    android:paddingBottom="20dp">
+
+                    <TextView
+                        style="@style/formLabel"
+                        android:textSize="@dimen/textview_text_size"
+                        android:text="Correo electronico"
+                        android:textColor="@color/Black85Opacity"/>
+
+                    <TextView
+                        android:id="@+id/tv_correo_electronico"
+                        style="@style/formLabel"
+                        android:maxLines="1"
+                        android:textSize="@dimen/textview_text_size"
+                        android:text="soylucas@hotmail.com"
+                        android:textColor="@color/soylucasfondo"
+                        />
+
+                </LinearLayout>
+
+                <com.lenddo.sdk.widget.LenddoButton
+                    android:id="@+id/verifyButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@color/soylucasfondo"
+                    android:gravity="center" />
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@null"></FrameLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+
+    </ScrollView>
+
+</LinearLayout>
+

@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/Purple">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingTop="40dp"
+            android:paddingBottom="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textStyle="italic"
+                android:textSize="20dp"
+                android:text="Recomiéndanos con un amigo y ganen"/>
+
+            <TextView
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textStyle="italic|bold"
+                android:textSize="35dp"
+                android:text="¡S/ 10 de descuento en una de sus cuotas!"/>
+
+            <ImageView
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/gift_100"/>
+
+            <TextView
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textSize="15dp"
+                android:text="Pásale la voz a cualquier amigo, familiar o conocido y una vez hayan hecho el desembolso de su préstamo, tú ganarás facilmente 10 soles de descuento en una de tus cuotas ¡y él también!"/>
+
+            <TextView
+                android:paddingTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/White"
+                android:textSize="18dp"
+                android:text="Tú código de invitación:"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="5dp">
+
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:inputType="text"
+                android:maxLength="6"
+                android:text="abc123"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:textSize="20dp"
+                android:textColor="@color/White"/>
+
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="Copiar"
+                android:textColor="@color/gris400"
+                android:background="@android:color/transparent"/>
+
+
+        </LinearLayout>
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingTop="30dp"
+                >
+
+                <Button
+                    android:id="@+id/btnSolicitarCredito"
+                    android:layout_width="300dp"
+                    android:padding="10dp"
+                    android:layout_height="50dp"
+                    android:textSize="17dp"
+                    android:background="@drawable/ps_button_digg"
+                    android:textColor="@color/Purple"
+                    android:textStyle="italic|bold"
+                    android:text="Compartir invitación"
+                    android:drawableRight="@drawable/share_36" />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

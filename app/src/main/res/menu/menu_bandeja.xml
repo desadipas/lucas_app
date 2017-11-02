@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/item_editar_datos"
+        android:title="Actualización datos"
+        android:icon="@android:drawable/ic_input_add"
+        app:showAsAction="withText">
+    </item>
+    <item
+        android:id="@+id/item_editar_contrasena"
+        android:title="Cambiar contraseña"
+        android:icon="@android:drawable/sym_call_outgoing"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/item_salir_sesion"
+        android:title="Cerrar sesión"
+        android:icon="@android:drawable/ic_delete"
+        app:showAsAction="never">
+    </item>
+</menu>

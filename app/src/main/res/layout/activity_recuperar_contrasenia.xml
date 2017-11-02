@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/fondo_sesion">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+            <ScrollView
+                android:paddingTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/White"
+                    android:orientation="vertical"
+                    android:paddingBottom="@dimen/activity_vertical_margin"
+                    android:paddingLeft="@dimen/activity_vertical_margin"
+                    android:paddingRight="@dimen/activity_vertical_margin"
+                    android:paddingTop="@dimen/activity_vertical_margin">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:paddingBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/logo_sesion" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/White"
+                        android:orientation="vertical"
+                        android:paddingBottom="15dp">
+
+                        <TextView
+                            android:id="@+id/tvTituloFb"
+                            style="@style/style_textview_title"
+                            android:text="¿Olvidaste tu contraseña?"
+                            android:textColor="@color/Black" />
+
+                    </LinearLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_correo_recuperar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textAlignment="viewStart"
+                        app:hintTextAppearance="@style/MyHintText"
+                        tools:errorEnabled="true"
+                        tools:errorTextAppearance="@style/MyErrorText">
+
+                        <EditText
+                            android:id="@+id/et_correo_recuperar"
+                            style="@style/style_edittext_inicio"
+                            android:gravity="start"
+                            android:hint="Correo electrónico"
+                            android:inputType="textEmailAddress"
+                            android:textAlignment="viewStart" />
+
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_nueva_contrasenia_recuperar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:layout_marginTop="20dp"
+                        android:textAlignment="viewStart"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/MyErrorText"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <com.maksim88.passwordedittext.PasswordEditText
+                            android:id="@+id/et_nueva_contrasenia_recuperar"
+                            style="@style/style_edittext_inicio"
+                            android:gravity="start"
+                            android:hint="Nueva Contraseña"
+                            android:inputType="textPassword"
+                            android:textAlignment="viewStart"
+                            app:pet_disableIconAlpha="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <android.support.design.widget.TextInputLayout
+                        android:id="@+id/input_layout_confirmar_contrasenia_recuperar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="start"
+                        android:textAlignment="viewStart"
+                        app:errorEnabled="true"
+                        app:errorTextAppearance="@style/MyErrorText"
+                        app:hintTextAppearance="@style/MyHintText">
+
+                        <com.maksim88.passwordedittext.PasswordEditText
+                            android:id="@+id/et_confirmar_contrasenia_recuperar"
+                            style="@style/style_edittext_inicio"
+                            android:gravity="start"
+                            android:hint="Confirmar Contraseña"
+                            android:inputType="textPassword"
+                            android:textAlignment="viewStart"
+                            app:pet_disableIconAlpha="true" />
+                    </android.support.design.widget.TextInputLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ly_codigo_verificador_numero"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:visibility="gone">
+
+                        <Button
+                            android:id="@+id/btn_solicitar_codigo"
+                            style="@style/style_button_inicio"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginTop="20dp"
+                            android:background="@drawable/ps_button_soylucas_amarillo"
+                            android:text="solicitar pin"
+                            android:textColor="@color/White" />
+
+                        <TextView
+                            android:paddingTop="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/Black"
+                            android:textSize="15dp"
+                            android:text="Ingresa tu PIN de seguridad"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:paddingTop="15dp">
+
+                            <EditText
+                                android:id="@+id/et_pin_seguridad"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:inputType="number"
+                                android:textStyle="bold"
+                                android:longClickable="true"
+                                android:gravity="center"
+                                android:hint="----"
+                                android:textSize="25dp"
+                                android:digits="0123456789"
+                                android:maxLength="4"/>
+
+                        </LinearLayout>
+
+
+
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/btn_continuar"
+                        style="@style/style_button_inicio"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/ps_button_soylucas_rojo"
+                        android:text="continuar"
+                        android:textColor="@color/White" />
+
+                    <Button
+                        android:id="@+id/btn_atras"
+                        style="@style/style_button_inicio"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/ps_button_soylucas_blanco"
+                        android:text="volver atras"
+                        android:textColor="@color/soylucasfondo" />
+
+                </LinearLayout>
+
+            </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>

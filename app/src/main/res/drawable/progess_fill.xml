@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <gradient
+        android:angle="90"
+        android:centerColor="@color/soylucasfondo"
+        android:endColor="@color/soylucasfondo"
+        android:startColor="@color/soylucasfondo" />
+
+    <corners android:radius="100dp" />
+
+    <stroke
+        android:width="1dp"
+        android:color="@color/soylucasfondo" />
+    <stroke
+        android:width="1dp"
+        android:color="@color/soylucasfondo" />
+
+</shape>

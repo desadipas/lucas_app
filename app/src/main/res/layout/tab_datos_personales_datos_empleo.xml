@@ -1,0 +1,297 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_vertical_margin"
+    android:paddingTop="@dimen/activity_vertical_margin">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/White"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dip"
+                    android:text="Actividad Eco."
+                    android:textColor="@color/gris600" />
+
+                <Spinner
+                    android:id="@+id/sp_act_eco"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dip"
+                    android:text="Situación Lab."
+                    android:textColor="@color/gris600" />
+
+                <Spinner
+                    android:id="@+id/sp_situ_lab"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dip"
+                    android:text="Profesión"
+                    android:textColor="@color/gris600" />
+
+                <Spinner
+                    android:id="@+id/sp_profesion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="10dip"
+                    android:text="Tipo empleo"
+                    android:textColor="@color/gris600" />
+
+                <Spinner
+                    android:id="@+id/sp_tipo_empleo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_ruc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                app:hintTextAppearance="@style/MyHintText"
+                tools:errorEnabled="true"
+                tools:errorTextAppearance="@style/MyErrorText">
+
+                <EditText
+                    android:id="@+id/et_ruc"
+                    style="@style/style_edittext_inicio"
+                    android:gravity="start"
+                    android:hint="Ruc"
+                    android:inputType="number"
+                    android:maxLength="11"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/edittext_text_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_centro_laboral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                app:hintTextAppearance="@style/MyHintText"
+                tools:errorEnabled="true"
+                tools:errorTextAppearance="@style/MyErrorText">
+
+                <EditText
+                    android:id="@+id/et_centro_laboral"
+                    style="@style/style_edittext_inicio"
+                    android:gravity="start"
+                    android:hint="Centro laboral"
+                    android:inputType="textMultiLine"
+                    android:maxLength="40"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/edittext_text_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingTop="3dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/input_layout_fecha_ing_laboral"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:gravity="start"
+                    android:textAlignment="viewStart"
+                    app:hintTextAppearance="@style/MyHintText"
+                    tools:errorEnabled="true"
+                    tools:errorTextAppearance="@style/MyErrorText">
+
+                    <EditText
+                        android:id="@+id/et_fecha_ing_laboral"
+                        style="@style/style_edittext_inicio"
+                        android:enabled="false"
+                        android:inputType="date"
+                        android:maxLength="10"
+                        android:hint="Fecha ing. laboral"
+                        android:textSize="@dimen/edittext_text_size" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <ImageButton
+                    android:id="@+id/ibtn_fecha_laboral"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/ps_button_soylucas_amarillo"
+                    android:src="@drawable/ic_logofecha" />
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_telefono_empleo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                app:hintTextAppearance="@style/MyHintText"
+                tools:errorEnabled="true"
+                tools:errorTextAppearance="@style/MyErrorText">
+
+                <EditText
+                    android:id="@+id/et_telefono_empleo"
+                    style="@style/style_edittext_inicio"
+                    android:gravity="start"
+                    android:hint="Teléfono"
+                    android:inputType="phone"
+                    android:maxLength="9"
+                    android:textAlignment="viewStart"
+                    android:textSize="@dimen/edittext_text_size"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_ingreso_declarado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:textAlignment="viewStart"
+                app:hintTextAppearance="@style/MyHintText"
+                tools:errorEnabled="true"
+                tools:errorTextAppearance="@style/MyErrorText">
+
+                <EditText
+                    android:id="@+id/et_ingreso_declarado_empleo"
+                    style="@style/style_edittext_inicio"
+                    android:gravity="start"
+                    android:hint="Ingreso declarado"
+                    android:inputType="numberDecimal"
+                    android:textAlignment="viewStart"
+                    android:maxLength="8"
+                    android:textSize="@dimen/edittext_text_size" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="10dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="top"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_atras_datos_empleo"
+            style="@style/style_button_secundario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ps_button_soylucas_blanco"
+            android:drawableLeft="@drawable/ic_atras_24px"
+            android:text="atras"
+            android:textColor="@color/Black" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_continuar_datos_empleo"
+            style="@style/style_button_secundario"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/ps_button_soylucas_amarillo"
+            android:drawableRight="@drawable/ic_continuar_forward_24px"
+            android:text="continuar"
+            android:textColor="@color/White" />
+
+    </LinearLayout>
+
+</LinearLayout>
